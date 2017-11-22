@@ -571,6 +571,7 @@ wait_async_response(Stream) ->
   receive
     {'DOWN', _MRef, process, Stream, _Reason} ->
       ok
+  after 500 -> ok
   end.
 
 
